@@ -2,17 +2,18 @@ package MainPackage;
 
 public class Cheese extends Food {
 
-    public Cheese(String name, int calories) {
-        super(name, calories);
+    public Cheese() {
+        super("Сыр", 402);
     }
 
     @Override
-    public void consume() {
-        System.out.println(this + " съеден");
-    }
+    public void consume() {System.out.println(get_name() + " съеден");}
 
     @Override
     public int calculateCalories() {
-        return 0;
+        return get_calories();
     }
+
+    @Override
+    public String toString(){ return super.toString(); }
 }
