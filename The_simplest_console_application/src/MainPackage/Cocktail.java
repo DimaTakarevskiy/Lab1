@@ -5,7 +5,7 @@ class Cocktail extends Food{
     private String _fruit = null;
 
     public Cocktail(String drink, String fruit) {
-        super("Cocktail", 0);
+        super("Коктель", 0);
         _drink = drink;
         _fruit = fruit;
     }
@@ -13,16 +13,16 @@ class Cocktail extends Food{
     public String get_drink() {
         return _drink;
     }
-    private void set_drink(String filling1) { _drink = filling1; }
+    private void set_drink(String drink) { _drink = drink; }
 
     public String get_fruit() {
         return _fruit;
     }
-    private void set_fruit(String filling2) { _fruit = filling2; }
+    private void set_fruit(String fruit) { _fruit = fruit; }
 
     @Override
     public void consume() {
-        System.out.println(get_name() + " Выпето");
+        System.out.println(get_name() + " Выпет");
     }
 
     @Override
@@ -33,8 +33,8 @@ class Cocktail extends Food{
             set_calories(get_calories() + 87);
         if (get_fruit().equals("Клубника"))
             set_calories(get_calories() + 33);
-        else if (get_fruit().equals("Шоколад"))
-            set_calories(get_calories() + 544);
+        else if (get_fruit().equals("Малина"))
+            set_calories(get_calories() + 53);
         return get_calories();
     }
 
